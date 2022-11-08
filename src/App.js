@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment } from './redux/counter';
+import { decrement, increment, incrementByAmount } from './redux/counter';
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -11,6 +11,7 @@ function App() {
       <h1>The count is: {count}</h1>
       <button onClick={() => {dispatch(increment())}}>Increment</button>
       <button onClick={() => {dispatch(decrement())}}>Decrement</button>
+      <button onClick={() => {dispatch(incrementByAmount(33))}}>Increment by 33</button>
     </div>
   );
 }
